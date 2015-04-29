@@ -14,6 +14,8 @@
 		84D9DFA61AF10E490063E0EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D9DFA51AF10E490063E0EF /* Images.xcassets */; };
 		84D9DFA91AF10E490063E0EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D9DFA71AF10E490063E0EF /* LaunchScreen.xib */; };
 		84D9DFB51AF10E490063E0EF /* UkrBashReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9DFB41AF10E490063E0EF /* UkrBashReaderTests.m */; };
+		84D9DFC01AF110710063E0EF /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9DFBF1AF110710063E0EF /* TableViewCell.m */; };
+		84D9DFC41AF121570063E0EF /* Unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D9DFC31AF121570063E0EF /* Unknown.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		84D9DFAE1AF10E490063E0EF /* UkrBashReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UkrBashReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D9DFB31AF10E490063E0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84D9DFB41AF10E490063E0EF /* UkrBashReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UkrBashReaderTests.m; sourceTree = "<group>"; };
+		84D9DFBE1AF110710063E0EF /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		84D9DFBF1AF110710063E0EF /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		84D9DFC31AF121570063E0EF /* Unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Unknown.png; path = UkrBashReader/Unknown.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 		84D9DF8C1AF10E490063E0EF = {
 			isa = PBXGroup;
 			children = (
+				84D9DFC31AF121570063E0EF /* Unknown.png */,
 				84D9DF971AF10E490063E0EF /* UkrBashReader */,
 				84D9DFB11AF10E490063E0EF /* UkrBashReaderTests */,
 				84D9DF961AF10E490063E0EF /* Products */,
@@ -89,6 +95,8 @@
 				84D9DFA51AF10E490063E0EF /* Images.xcassets */,
 				84D9DFA71AF10E490063E0EF /* LaunchScreen.xib */,
 				84D9DF981AF10E490063E0EF /* Supporting Files */,
+				84D9DFBE1AF110710063E0EF /* TableViewCell.h */,
+				84D9DFBF1AF110710063E0EF /* TableViewCell.m */,
 			);
 			path = UkrBashReader;
 			sourceTree = "<group>";
@@ -200,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D9DFA41AF10E490063E0EF /* Main.storyboard in Resources */,
+				84D9DFC41AF121570063E0EF /* Unknown.png in Resources */,
 				84D9DFA91AF10E490063E0EF /* LaunchScreen.xib in Resources */,
 				84D9DFA61AF10E490063E0EF /* Images.xcassets in Resources */,
 			);
@@ -220,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D9DFA11AF10E490063E0EF /* ViewController.m in Sources */,
+				84D9DFC01AF110710063E0EF /* TableViewCell.m in Sources */,
 				84D9DF9E1AF10E490063E0EF /* AppDelegate.m in Sources */,
 				84D9DF9B1AF10E490063E0EF /* main.m in Sources */,
 			);

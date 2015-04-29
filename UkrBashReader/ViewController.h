@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TableViewCell.h"
+@interface ViewController : UITableViewController <NSXMLParserDelegate>
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-@interface ViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UINavigationItem *navigationBar;
 
 @end
 
