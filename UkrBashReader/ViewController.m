@@ -37,15 +37,13 @@
     [super viewDidLoad];
     self.title = @"Published";
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.6 green:0.8 blue:0.8 alpha:0.4];
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:UITextAttributeTextColor]];
+    self.navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName: [UIColor whiteColor]};
     feeds = [[NSMutableArray alloc] init];
     NSURL *url = [NSURL URLWithString:@"https://api.ukrbash.org/1/quotes.getTheBest.xml?client=8fca3e61502a0ec2"];
     parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];
     [parser parse];
-    self.tableView.estimatedRowHeight = 68.0;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView reloadData];
 }
 
@@ -54,6 +52,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 - (NSString*) unixToString: (double) date {
     double unixTimeStamp = date;
@@ -88,6 +87,16 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  {
+    if (NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_7_1) {
+        NSString * tweetTextString = [[feeds objectAtIndex:indexPath.row] objectForKey: @"text"] ;
+        CGSize textSize = [tweetTextString sizeWithFont:[UIFont systemFontOfSize:15.0f] constrainedToSize:CGSizeMake([UIScreen mainScreen].bounds.size.width-60, 20000) lineBreakMode: NSLineBreakByWordWrapping];
+        return textSize.height + 150;
+    }
+    NSString * tweetTextString = [[feeds objectAtIndex:indexPath.row] objectForKey: @"text"] ;
+    CGSize textSize = [tweetTextString sizeWithFont:[UIFont systemFontOfSize:15.0f] constrainedToSize:CGSizeMake([UIScreen mainScreen].bounds.size.width-80, 20000) lineBreakMode: NSLineBreakByWordWrapping];
+    return textSize.height + 170;
+}
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     
